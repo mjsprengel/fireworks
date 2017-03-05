@@ -6,7 +6,7 @@ function Particle(x,y,firework,red,green,blue) {
   this.pos = createVector(x,y);
   
   if(this.firework){
-    this.vel = createVector(0 , random(-3, -7));
+    this.vel = createVector(0 , random(-4, -8));
   } else {
     this.vel = p5.Vector.random2D();
     this.vel.mult(random(1,5));
@@ -21,7 +21,7 @@ this.update = function() {
   
   if(!this.firework){
     this.vel.mult(0.98);
-    this.lifespan -= 2;
+    this.lifespan -= 5;
   }
   this.vel.add(this.acc);
   this.pos.add(this.vel);
