@@ -3,9 +3,25 @@ function Firework(X,Y){
   this.firework = new Particle(X, Y, true);
   this.exploded = false
   this.particles = [];
-  this.colorR = random(255);
-  this.colorG = random(1);
-  this.colorB = random(255);
+  
+  function randombinary(){
+    x = random(1);
+    if(x<0.5){
+      return 1;
+    } else {
+      return 0;
+    }
+  }
+  
+  this.colorR = 255*randombinary();
+  this.colorG = 255*randombinary();
+  this.colorB = 255*randombinary();
+  
+  if (this.colorR+this.colorG+this.colorB == 0){
+    this.colorR = 255*randombinary();
+    this.colorG = 255*randombinary();
+    this.colorB = 255*randombinary();
+  }
   
   this.done = function(){
     if(this.exploded && this.particles.length === 0){
