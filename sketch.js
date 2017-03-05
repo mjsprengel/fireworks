@@ -11,7 +11,7 @@ function setup() {
 }
 
 function draw() {
-  background(80);
+  background(0);
   //if(random(1) < 0.01){
     //fireworks.push(new Firework());
   //}
