@@ -38,8 +38,6 @@ function Firework(X,Y){
       this.firework.update();
       
       if(this.firework.vel.y >= 0){
-        explode.setVolume(0.5);
-        explode.play();
         this.exploded = true
         this.explode();
       }
@@ -56,6 +54,8 @@ function Firework(X,Y){
   }
   
   this.explode = function() {
+    explode.setVolume(0.5);
+    explode.play();
     for(var i = 0; i<50; i++){
       var p = new Particle(this.firework.pos.x, this.firework.pos.y, false, this.colorR, this.colorG, this.colorB);
       this.particles.push(p);
