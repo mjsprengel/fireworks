@@ -1,6 +1,10 @@
 var fireworks = [];
 var gravity;
 
+function preload() {
+  fire = loadSound('shoot.mp3');
+}
+
 function setup() {
   createCanvas(document.documentElement.clientWidth, document.documentElement.clientHeight); 
   document.documentElement.style.overflow = 'hidden'; //hide scroll bars for better viewing chrome/firefox
@@ -28,6 +32,8 @@ function draw() {
 
 function mousePressed(){
   fireworks.push(new Firework(mouseX, mouseY));
+  fire.setVolume(0.5);
+  fire.play();
 }
 
 
