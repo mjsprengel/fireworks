@@ -33,7 +33,7 @@ function draw() {
 
 function mousePressed(){
   fireworks.push(new Firework(mouseX, mouseY));
-  fire.setVolume(0.5);
+  fire.setVolume(0.1);
   fire.play();
 }
 
