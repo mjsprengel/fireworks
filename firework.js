@@ -54,7 +54,7 @@ function Firework(X,Y){
   }
   
   this.explode = function() {
-    explode.setVolume(0.5);
+    explode.setVolume(0.2);
     explode.play();
     for(var i = 0; i<50; i++){
       var p = new Particle(this.firework.pos.x, this.firework.pos.y, false, this.colorR, this.colorG, this.colorB);
