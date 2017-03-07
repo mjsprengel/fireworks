@@ -4,6 +4,7 @@ var gravity;
 function preload() {
   fire = loadSound('shoot.mp3');
   explode = loadSound('explode.mp3');
+  special = loadSound('special.mp3');
 }
 
 function setup() {
