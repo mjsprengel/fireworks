@@ -3,7 +3,7 @@ var gravity;
 
 function preload() {
   fire = loadSound('shoot.mp3');
-  fire = loadSound('explode.mp3');
+  explode = loadSound('explode.mp3');
 }
 
 function setup() {
