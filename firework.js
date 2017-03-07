@@ -38,6 +38,8 @@ function Firework(X,Y){
       this.firework.update();
       
       if(this.firework.vel.y >= 0){
+        explode.setVolume(0.5);
+        explode.play();
         this.exploded = true
         this.explode();
       }
