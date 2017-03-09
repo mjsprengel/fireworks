@@ -55,14 +55,14 @@ function Firework(X,Y){
   
   this.explode = function() {
     
-    //var flip = random(1);
-    //if(flip>0.1){
-      //explode.setVolume(0.1);
-      //explode.play();
-    //} else {
+    var flip = random(1);
+    if(flip>0.1){
+      explode.setVolume(0.1);
+      explode.play();
+    } else {
     surprise.setVolume(0.1);
     surprise.play();
-    //}
+    }
     for(var i = 0; i<50; i++){
       var p = new Particle(this.firework.pos.x, this.firework.pos.y, false, this.colorR, this.colorG, this.colorB);
       this.particles.push(p);
