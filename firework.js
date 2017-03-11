@@ -64,41 +64,37 @@ function Firework(X,Y){
     surprise.setVolume(0.1);
     surprise.play();
     }*/
-    
-    switch(flip){
-      case flip < 0.1:
+   
+    if (flip < 0.1){
         surprise.setVolume(0.1);
-        surprise.play();
-      case ((flip < 0.2) && (flip >= 0.1)):
+        surprise.play();}
+    if ((flip < 0.2) && (flip >= 0.1)){
         surprise1.setVolume(0.1);
-        surprise1.play();
-      case ((flip < 0.3) && (flip >= 0.2)):
+        surprise1.play();}
+    if ((flip < 0.3) && (flip >= 0.2)){
         surprise2.setVolume(0.1);
-        surprise2.play();
-      case ((flip < 0.4) && (flip >= 0.3)):
+        surprise2.play();}
+    if ((flip < 0.4) && (flip >= 0.3)){
         surprise3.setVolume(0.1);
-        surprise3.play();
-      case ((flip < 0.5) && (flip >= 0.4)):
+        surprise3.play();}
+    if ((flip < 0.5) && (flip >= 0.4)){
         surprise4.setVolume(0.1);
-        surprise4.play();
-      case ((flip < 0.6) && (flip >= 0.5)):
+        surprise4.play();}
+    if ((flip < 0.6) && (flip >= 0.5)){
         surprise5.setVolume(0.1);
-        surprise5.play();
-      case ((flip < 0.7) && (flip >= 0.6)):
+        surprise5.play();}
+    if ((flip < 0.7) && (flip >= 0.6)){
         surprise6.setVolume(0.1);
-        surprise6.play();
-      case ((flip < 0.8) && (flip >= 0.7)):
+        surprise6.play();}
+    if((flip < 0.8) && (flip >= 0.7)){
         surprise7.setVolume(0.1);
-        surprise7.play();
-      case ((flip < 0.9) && (flip >= 0.8)):
+        surprise7.play();}
+    if((flip < 0.9) && (flip >= 0.8)){
         surprise8.setVolume(0.1);
-        surprise8.play();
-      case ((flip <= 1) && (flip >= 0.9)):
+        surprise8.play();}
+    if ((flip <= 1) && (flip >= 0.9)){
         surprise9.setVolume(0.1);
-        surprise9.play();
-       }
-        
-        
+        surprise9.play();}
         
     for(var i = 0; i<50; i++){
       var p = new Particle(this.firework.pos.x, this.firework.pos.y, false, this.colorR, this.colorG, this.colorB);
