@@ -17,7 +17,9 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(document.documentElement.clientWidth, document.documentElement.clientHeight); 
+  var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+  var height = (window.innerHeight > 0) ? window.innerHeight : screen.height;
+  createCanvas(width, height); 
   document.documentElement.style.overflow = 'hidden'; //hide scroll bars for better viewing chrome/firefox
   document.body.scroll = "no"; //hide scrollbars for ie
   gravity = createVector(0, 0.08);
