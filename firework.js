@@ -57,15 +57,15 @@ function Firework(X,Y){
   this.explode = function() {
     
     var flip = random(1);
-    /*if(flip>0.1){
+    if(flip>0.05){
       explode.setVolume(0.1);
       explode.play();
     } else {
-    surprise.setVolume(0.1);
-    surprise.play();
-    }*/
+      surprise.setVolume(0.1);
+      surprise.play();
+    }
    
-    if (flip < 0.1){
+    /*if (flip < 0.1){
         surprise.setVolume(0.1);
         surprise.play();}
     if ((flip < 0.2) && (flip >= 0.1)){
@@ -94,7 +94,7 @@ function Firework(X,Y){
         surprise8.play();}
     if ((flip <= 1) && (flip >= 0.9)){
         surprise9.setVolume(0.1);
-        surprise9.play();}
+        surprise9.play();}*/
         
     for(var i = 0; i<50; i++){
       var p = new Particle(this.firework.pos.x, this.firework.pos.y, false, this.colorR, this.colorG, this.colorB);
