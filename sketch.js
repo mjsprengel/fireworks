@@ -2,24 +2,11 @@ var fireworks = [];
 var gravity;
 
 function preload() {
-  fire = loadSound('sounds/shoot.mp3');
   explode = loadSound('sounds/explode.mp3');
-  surprise = loadSound('sounds/surprise.mp3');
-  surprise1 = loadSound('sounds/surprise1.mp3');
-  surprise2 = loadSound('sounds/surprise2.mp3');
-  surprise3 = loadSound('sounds/surprise3.mp3');
-  surprise4 = loadSound('sounds/surprise4.mp3');
-  surprise5 = loadSound('sounds/surprise5.mp3');
-  surprise6 = loadSound('sounds/surprise6.mp3');
-  surprise7 = loadSound('sounds/surprise7.mp3');
-  surprise8 = loadSound('sounds/surprise8.mp3');
-  surprise9 = loadSound('sounds/surprise9.mp3');
 }
 
 function setup() {
-  var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-  var height = (window.innerHeight > 0) ? window.innerHeight : screen.height;
-  createCanvas(width, height); 
+  createCanvas(displayWidth, displayHeight); 
   document.documentElement.style.overflow = 'hidden'; //hide scroll bars for better viewing chrome/firefox
   document.body.scroll = "no"; //hide scrollbars for ie
   gravity = createVector(0, 0.08);
@@ -29,10 +16,6 @@ function setup() {
 
 function draw() {
   background(0);
-  //if(random(1) < 0.01){
-    //fireworks.push(new Firework());
-  //}
-  
   for(var i = fireworks.length-1; i>=0; i--){
     fireworks[i].update();
     fireworks[i].show();
@@ -45,8 +28,6 @@ function draw() {
 
 function mousePressed(){
   fireworks.push(new Firework(mouseX, mouseY));
-  //fire.setVolume(0.1);
-  //fire.play();
 }
 
 
